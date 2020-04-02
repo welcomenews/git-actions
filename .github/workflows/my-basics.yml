@@ -19,13 +19,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Print Hello
+      - name: Print Hello num 2
         run: echo "Hellow world from testing"
 
   my_deploy:
     runs-on: [ubuntu-latest]
+    needs: [my_testing]
     steps:
-      - name: Print Hello
+      - name: Print Hello num 2
         run: echo "Hellow world from deploy"
       
       
